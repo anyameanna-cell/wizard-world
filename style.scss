@@ -1,0 +1,86 @@
+body {
+    background: url('/door.png') no-repeat center/cover;
+
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+.login {
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: blueviolet;
+    width: 300px;
+    height: 250px;
+    box-shadow: 0px 0px 20px 20px rgba(118, 59, 133, 0.7);
+    border-radius: 25px;
+    animation: logInShadow 5s infinite;
+
+    &-nickname{
+    width: 90%;
+    margin-top: 50px;
+    min-height: 40px;
+    color: white;
+    background: #000;
+    border: none;
+    border-radius: 9px;
+    }
+    &-pin {
+    width: 90%;
+    min-height: 40px;
+    margin-top: 20px;
+    color: white;
+    background: #000;
+    border: none;
+    border-radius: 9px;
+}
+
+    &-pin-torch {
+    width: 70px;
+    position: absolute;
+    rotate: -20deg;
+    margin-left: 230px;
+    margin-top: -20px;
+    cursor: pointer;
+}
+
+    &-submit {
+    border: none;
+    background: none;
+}
+
+    &-submit-portal {
+    width: 100px;
+    animation: portal 15s linear infinite;
+    cursor: pointer;
+}
+
+}
+
+@keyframes logInShadow {
+    0%{
+        box-shadow: 0px 0px 10px 10px rgba(118, 59, 133, 0.7);
+    }
+
+    50%{
+    box-shadow: 0px 0px 20px 20px rgba(118, 59, 133, 0.7);
+    }
+
+    100%{
+    box-shadow: 0px 0px 10px 10px rgba(118, 59, 133, 0.7);
+    }
+}
+
+@keyframes portal {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
